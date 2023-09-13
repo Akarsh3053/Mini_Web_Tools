@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>QR Generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>Enter your text or URL</p>
+      <input type="text" placeholder="Text or URL" id="qrText" />
+      <button onclick="qrGenerator()">Generate QR Code</button>
+      <p id="error_message"></p>
+
+      <div id="qrcode">
+        <img src="" id="qr" />
+      </div>
+    </div>
+
+    <script>
+      let qrcode = document.getElementById("qrcode");
+      let codeImage = document.getElementById("qr");
+      let qrText = document.getElementById("qrText");
+
+      function qrGenerator() {
+        if (qrText.value.length > 0) {
+          codeImage.style.display = 'block'
+          document.getElementById("error_message").innerHTML = "";
+          codeImage.src =
+            "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=" +
+            qrText.value;
+          qrcode.classList.add("show-img");
+        } else {
+          codeImage.style.display = "none";
+          document.getElementById("error_message").innerHTML =
+            "Enter some text!!!";
+          qrText.style.animation = "jiggle 0.1s linear 10";
+        }
+      }
+    </script>
+  </body>
+</html>
