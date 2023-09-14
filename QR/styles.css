@@ -55,7 +55,7 @@ body {
   border-radius: 5px;
   max-height: 0;
   overflow: hidden;
-  transition: height 1s ease;
+  transition: height 1s linear;
 }
 
 #qrcode img {
