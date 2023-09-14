@@ -69,10 +69,6 @@ body {
   border: 1px solid #d1d1d1;
 }
 
-.error {
-  animation: jiggle 0.1s linear 10;
-}
-
 @keyframes jiggle {
   0% {
     transform: translateX(0);
