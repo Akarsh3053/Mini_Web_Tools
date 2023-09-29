@@ -10,10 +10,40 @@
     <div class="container">
       <h1>Generate a<br /><span> Random Password</span></h1>
       <div class="display">
-        <input type="text" id="Password" placeholder="Password" />
+        <input type="text" id="password" placeholder="Password" />
         <img src="images/copy_icon.png" />
       </div>
-      <button><img src="images/generate_icon.png" />Generate Password</button>
+      <button onclick="createPassword()">
+        <img src="images/generate_icon.png" />Generate Password
+      </button>
     </div>
+
+    <script>
+      const passwordBox = document.getElementById("password");
+      const length = 12;
+
+      // dataStrings
+      const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const lowerCase = "abcdefghijklmnopqrstuvwxyz";
+      const numbers = "0123456789";
+      const symbols = "@#$%*_+-~></=";
+
+      charMix = upperCase + lowerCase + numbers + symbols;
+
+      // password generator funtion
+      function createPassword() {
+        let password = "";
+        password += upperCase[Math.floor(Math.random() * upperCase.length)];
+        password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+        password += numbers[Math.floor(Math.random() * numbers.length)];
+        password += symbols[Math.floor(Math.random() * symbols.length)];
+
+        while (length > password.length) {
+          password += charMix[Math.floor(Math.random() * charMix.length)];
+        }
+
+        passwordBox.value = password;
+      }
+    </script>
   </body>
 </html>
