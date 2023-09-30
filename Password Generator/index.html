@@ -11,7 +11,7 @@
       <h1>Generate a<br /><span> Random Password</span></h1>
       <div class="display">
         <input type="text" id="password" placeholder="Password" />
-        <img src="images/copy_icon.png" />
+        <img src="images/copy_icon.png" onclick="copyPassword()" />
       </div>
       <button onclick="createPassword()">
         <img src="images/generate_icon.png" />Generate Password
@@ -43,6 +43,11 @@
         }
 
         passwordBox.value = password;
+      }
+
+      function copyPassword() {
+        passwordBox.select();
+        document.execCommand("copy");
       }
     </script>
   </body>
