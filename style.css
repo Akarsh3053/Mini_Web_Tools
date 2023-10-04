@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #002339;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: x-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aqua;
+}
+ul {
+  font-size: 24px;
+  color: white;
+}
+
+li {
+  color: bisque;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
