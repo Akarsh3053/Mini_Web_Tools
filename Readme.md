@@ -4,4 +4,4 @@ A collection of mini web apps that can be used independently or added directly i
 ## Collection
 - QR Code Generator
 - Password Generator
-- Off wall navBar Scroll Art
+- Off-wall navBar Scroll Art
