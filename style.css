@@ -7,25 +7,22 @@ body {
   height: 80vh;
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #002339;
 }
 
-h1 {
-  margin-bottom: 10px;
-  font-size: x-large;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: aqua;
-}
-ul {
-  font-size: 24px;
-  color: white;
+div {
+  display: flex;
+  justify-content: space-between;
 }
 
-li {
-  color: bisque;
-  text-decoration: none;
+h1 {
+  margin-bottom: 10px;
+  font-size: 80px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aqua;
 }
 
 a {
@@ -33,7 +30,19 @@ a {
   color: white;
 }
 
-button{
-  width: 28px;
-  margin: 10px;
+button {
+  margin: 20px 20px;
+  border: 0;
+  outline: 0;
+  background-color: #019f55;
+  color: white;
+  font-size: 22px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 26px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all ease-in;
 }
