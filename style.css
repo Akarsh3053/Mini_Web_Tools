@@ -32,3 +32,8 @@ a {
   text-decoration: none;
   color: white;
 }
+
+button{
+  width: 28px;
+  margin: 10px;
+}
