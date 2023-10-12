@@ -5,3 +5,7 @@ A collection of mini web apps, web designs and widgets that can be used independ
 - QR Code Generator
 - Password Generator
 - Off-wall navBar Scroll Art
+
+
+### Check Live Preview Here
+<a href="https://akarsh3053.github.io/Mini_Web_Tools" target="_blank"><img src="https://www.animatedimages.org/data/media/1096/animated-click-here-sign-and-button-image-0042.gif" /></a>
