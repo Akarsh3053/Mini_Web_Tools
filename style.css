@@ -46,3 +46,7 @@ button {
   cursor: pointer;
   transition: all ease-in;
 }
+
+button:hover {
+  box-shadow: 5px 5px 0px #2f4a5b;
+}
