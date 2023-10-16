@@ -5,6 +5,7 @@ A collection of mini web apps, web designs and widgets that can be used independ
 - QR Code Generator
 - Password Generator
 - Off-wall navBar Scroll Art
+- Weather App
 
 
 ### Check Live Preview Here
