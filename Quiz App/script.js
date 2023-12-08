@@ -60,6 +60,8 @@ function startQuiz() {
   showQuestions();
 }
 
+// Something went wrong from here fix tomorrow
+
 function showQuestions() {
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
