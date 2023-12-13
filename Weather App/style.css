@@ -20,6 +20,7 @@ body {
   border-radius: 20px;
   padding: 40px 35px;
   text-align: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Adjust the values as needed */
 }
 
 .search {
