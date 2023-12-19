@@ -44,6 +44,15 @@ const questions = [
       { text: "Death Note", correct: false },
     ],
   },
+  {
+    question: "Which is not an API metho ?",
+    answers: [
+      { text: "REST", correct: false },
+      { text: "GraphQL", correct: false },
+      { text: "OpenAPI", correct: true },
+      { text: "gRPC", correct: false },
+    ],
+  },
 ];
 
 const questionElement = document.getElementById("question");
