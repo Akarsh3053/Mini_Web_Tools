@@ -20,9 +20,9 @@ const questions = [
   {
     question: "Which cartoon character transforms into alien superheros?",
     answers: [
-      { text: "Ben 10", correct: false },
+      { text: "Keymon", correct: false },
       { text: "Generator Rex", correct: false },
-      { text: "Ben 10", correct: false },
+      { text: "Horried Henry", correct: false },
       { text: "Ben 10", correct: true },
     ],
   },
@@ -99,6 +99,7 @@ function selectAnswer(e) {
   const isCorrect = selectedBtn.dataset.correct === "true";
   if (isCorrect) {
     selectedBtn.classList.add("correct");
+    score++;
   } else {
     selectedBtn.classList.add("incorrect");
   }
@@ -111,5 +112,28 @@ function selectAnswer(e) {
   });
   nextButton.style.display = "block";
 }
+
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+}
+
+function handleNextButton() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestions();
+  } else {
+    showScore();
+  }
+}
+
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+});
 
 startQuiz();
