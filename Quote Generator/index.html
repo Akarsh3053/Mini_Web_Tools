@@ -11,24 +11,30 @@
 <body>
     <div class="quote-box">
         <h2>Quote of the day📜</h2>
-        <blockquote>Loading....</blockquote>
-        <span>Loading...</span>
+        <blockquote id="quote">Loading....</blockquote>
+        <span id="author">Loading...</span>
         <div>
-            <button>New Quote</button>
+            <button onclick="getQuote(api_url)">New Quote</button>
             <button><img src="twitter.png" alt="">Tweet</button>
         </div>
     </div>
 
     <script>
-        const api_url = "https://api.quotahttps://api.quotable.io/quotes/random?tags=technology,famous"
+
+        const api_url = "https://api.quotable.io/quotes/random?tags=life,famous-quotes";
+        const quote = document.getElementById("quote");
+        const author = document.getElementById("author");
+
+
+
         async function getQuote(url) {
-            const response = fetch(url);
+            const response = await fetch(url);
             var data = await response.json();
-            console.log(data);
+            quote.innerHTML = data[0].content;
+            author.innerHTML = data[0].author;
         }
 
-
-        getQuote(api_url)
+        getQuote(api_url);
     </script>
 
 </body>
