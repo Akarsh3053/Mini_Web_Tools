@@ -18,6 +18,19 @@
             <button><img src="twitter.png" alt="">Tweet</button>
         </div>
     </div>
+
+    <script>
+        const api_url = "https://api.quotahttps://api.quotable.io/quotes/random?tags=technology,famous"
+        async function getQuote(url) {
+            const response = fetch(url);
+            var data = await response.json();
+            console.log(data);
+        }
+
+
+        getQuote(api_url)
+    </script>
+
 </body>
 
 </html>
