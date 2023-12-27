@@ -15,7 +15,7 @@
         <span id="author">Loading...</span>
         <div>
             <button onclick="getQuote(api_url)">New Quote</button>
-            <button><img src="twitter.png" alt="">Tweet</button>
+            <button onclick="tweet()"><img src="twitter.png" alt="">Tweet</button>
         </div>
     </div>
 
@@ -33,8 +33,13 @@
             quote.innerHTML = data[0].content;
             author.innerHTML = data[0].author;
         }
-
+        // href="https://twitter.com/intent/tweet?text=Hello%20world"
         getQuote(api_url);
+
+        function tweet() {
+            window.open("https://twitter.com/intent/tweet?text=" + quote.innerHTML + "  --" + author.innerHTML, "Share on X", "width=650, height=350");
+        }
+
     </script>
 
 </body>
