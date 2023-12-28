@@ -11,6 +11,7 @@ A collection of mini web apps, web designs, and widgets that can be used indepen
 - Weather Scenery
 - Notes App
 - Quiz App
+- Quotes Generator
 
 ## Tech Used
 
