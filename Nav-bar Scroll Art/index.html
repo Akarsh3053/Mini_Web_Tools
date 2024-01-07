@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Unfortunate 💔</title>
-  </head>
-  <body>
-    <nav id="nav">
-      <a href="#">
-        <span>I Had</span>
-        <img src="a1.jpeg" />
-      </a>
-      <a href="#">
-        <span>All and</span>
-        <img src="a2.jpeg" />
-      </a>
-      <a href="#">
-        <span>Then Most</span>
-        <img src="a3.jpeg" />
-      </a>
-      <a href="#">
-        <span>of YOU...</span>
-        <img src="a4.jpeg" />
-      </a>
-      <a href="#">
-        <span>SOME</span>
-        <img src="a5.jpeg" />
-      </a>
-      <a href="#">
-        <span>and Now...</span>
-        <img src="a6.jpeg" />
-      </a>
-      <a href="#">
-        <span>NONE</span>
-        <img src="a7.jpg" />
-      </a>
-      <a href="#">
-        <span>of YOU...</span>
-        <img src="a8.jpeg" />
-      </a>
-    </nav>
 
-    <script>
-      const nav = document.getElementById("nav");
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Unfortunate 💔</title>
+</head>
 
-      for (const link of nav.getElementsByTagName("a")) {
-        link.onmousemove = (e) => {
-          const rect = link.getBoundingClientRect(),
-            img = link.querySelector("img");
+<body>
+  <nav id="nav">
+    <a href="#">
+      <span>I Had</span>
+      <img src="images/a1.jpeg" />
+    </a>
+    <a href="#">
+      <span>All and</span>
+      <img src="images/a2.jpeg" />
+    </a>
+    <a href="#">
+      <span>Then Most</span>
+      <img src="images/a3.jpeg" />
+    </a>
+    <a href="#">
+      <span>of YOU...</span>
+      <img src="images/a4.jpeg" />
+    </a>
+    <a href="#">
+      <span>SOME</span>
+      <img src="images/a5.jpeg" />
+    </a>
+    <a href="#">
+      <span>and Now...</span>
+      <img src="images/a6.jpeg" />
+    </a>
+    <a href="#">
+      <span>NONE</span>
+      <img src="images/a7.jpg" />
+    </a>
+    <a href="#">
+      <span>of YOU...</span>
+      <img src="images/a8.jpeg" />
+    </a>
+  </nav>
 
-          img.style.left = `${e.clientX - rect.left}px`;
-          img.style.top = `${e.clientY - rect.top}px`;
-        };
-      }
+  <script>
+    const nav = document.getElementById("nav");
 
-      window.onmousemove = (e) => {
-        const percent = e.clientY / window.innerHeight;
+    for (const link of nav.getElementsByTagName("a")) {
+      link.onmousemove = (e) => {
+        const rect = link.getBoundingClientRect(),
+          img = link.querySelector("img");
 
-        nav.animate(
-          {
-            transform: `translateY(${percent * nav.offsetHeight * -1}px)`,
-          },
-          {
-            fill: "forwards",
-            duration: 4000,
-          }
-        );
+        img.style.left = `${e.clientX - rect.left}px`;
+        img.style.top = `${e.clientY - rect.top}px`;
       };
-    </script>
-  </body>
+    }
+
+    window.onmousemove = (e) => {
+      const percent = e.clientY / window.innerHeight;
+
+      nav.animate(
+        {
+          transform: `translateY(${percent * nav.offsetHeight * -1}px)`,
+        },
+        {
+          fill: "forwards",
+          duration: 4000,
+        }
+      );
+    };
+  </script>
+</body>
+
 </html>
 
 <!-- This is an emplementation for off wall nav for original project port. -->
