@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* Base Styles */
+html,
+body {
+  overflow: hidden;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #2f2f2f;
+}
+
+/* Countdown Timer Styles */
+.timer {
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  text-shadow: #202124 0 0 10px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+.card {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(50, 50, 50, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(30, 30, 30, 0.37);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+.timer p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  line-height: 1rem;
+  margin: 0;
+}
+
+/* #seconds {
+} */
+
+.ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg) scale(2.5);
+  z-index: 2;
+}
+
+.ring circle {
+  fill: none;
+}
+
+.ring-background {
+  stroke: #101112;
+  filter: drop-shadow(0 0 0.75rem white);
+  /*  stroke-width determines width of the ring  */
+  stroke-width: 1.75;
+  opacity: 0.5;
+}
+
+.ring-progress {
+  stroke: white;
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  /*  stroke-width determines width of the ring – by making the progress-ring slightly larger, we can avoid having what looks like a border from the ring-background   */
+  stroke-width: 2;
+}
+
+.timer svg {
+  position: absolute;
+  z-index: 1;
+}
+
+a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.9));
+}
+
+/* 3D Scene Canvas */
+#canvas {
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  top: 10%;
+  height: 80%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  z-index: 1;
+}
+
+.title {
+  font-size: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.socials svg {
+  margin: 0 5px;
+  transition: all 0.5s ease-in-out;
+  transform: scale(1);
+}
+
+.socials svg:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 1));
+}
