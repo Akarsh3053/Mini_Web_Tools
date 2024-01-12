@@ -1,6 +1,6 @@
 // Define countdown time in minutes and seconds
 const countdownTime = {
-  minutes: 5,
+  minutes: 2,
   seconds: 0
 };
 
