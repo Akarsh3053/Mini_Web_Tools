@@ -4,13 +4,18 @@ A collection of mini web apps, web designs, and widgets that can be used indepen
 
 ## Collection
 
+- Age Calculator
+- Animated Countdown Screen
 - QR Code Generator
 - Password Generator
-- Off-wall navBar Scroll Art
+- Navbar Scroll Art
 - Weather App
-- Weather Scenery
+- Seasons Scenery
 - Notes App
+- Liquid Mask WebGL
+- ToDo List
 - Quiz App
+- Emoji Keyboard
 - Random Quotes
 
 ## Tech Used
