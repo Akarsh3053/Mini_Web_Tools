@@ -6,6 +6,7 @@ body {
   color: #eee;
   margin: 0;
   font-size: 12px;
+  overflow: hidden;
 }
 
 a {
@@ -20,8 +21,37 @@ header {
   height: 50px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 
 header a {
   margin-right: 40px;
+}
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .list .item .content {
+  position: absolute;
+  top: 20%;
+  width: 1140px;
+  max-width: 75%;
+  left: 50%;
+  transform: translateX(-50%);
 }
