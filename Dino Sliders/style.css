@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+
+@media screen and (max-width: 678px) {
+  .slider .list .item .content{
+    padding-right: 0;
+  }
+  .slider .list .item .content .title{
+    font-size: 30px;
+  }
+}
+
+/* Animations */
 @keyframes showContent {
   to{
     opacity: 1;
@@ -27,6 +38,30 @@
 @keyframes transformThumbnail{
   to{
     transform: translateX(0);
+  }
+}
+
+@keyframes outputImage{
+  to{
+    width: 150px;
+    height: 220px;
+    border-radius: 20px;
+    left: 50%;
+    bottom: 50px;
+  }
+}
+
+@keyframes contentOut{
+  to{
+    transform: translateY(150px);
+    filter: blur(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes timeRunning{
+  to{
+    width: 0%;
   }
 }
 
@@ -247,3 +282,50 @@ header a {
   animation: transformThumbnail .5s linear 1 forwards;
 }
 
+.slider.prev .list .item:nth-child(2){
+  z-index: 2;
+}
+
+.slider.prev .list .item:nth-child(2) img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: outImage 0.5s linear 1 forwards;
+}
+
+.slider.prev .thumbnail .item:nth-child(1){
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  animation: showThumbnail .5s linear 1 forwards;
+}
+
+.slider.list.item:nth-child(2) .type,
+.slider.list.item:nth-child(2) .period,
+.slider.list.item:nth-child(2) .name,
+.slider.list.item:nth-child(2) .description,
+.slider.list.item:nth-child(2) .buttons
+{
+  animation: contentOut 1.5s linear 1 forwards;
+}
+
+.slider.next .arrows button,
+.slider.prev .arrows button{
+  pointer-events: none;
+}
+
+.time{
+  width: 0%;
+  height: 5px;
+  background-color: #f1683a;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.slider.next .time,
+.slider.prev .time{
+  width: 100%;
+  animation: timeRunning 2s linear 1 forwards;
+}
