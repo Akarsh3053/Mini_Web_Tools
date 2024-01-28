@@ -17,6 +17,8 @@ A collection of mini web apps, web designs, and widgets that can be used indepen
 - Quiz App
 - Emoji Keyboard
 - Random Quotes
+- Rotating Cube
+- Dino Slider
 
 ## Tech Used
 
