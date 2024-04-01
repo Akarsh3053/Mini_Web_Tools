@@ -8,8 +8,9 @@ A collection of mini web apps, web designs, and widgets that can be used indepen
 |-----------------|-----------------|-----------------|
 | Age Calculator | Animated Countdown Screen | QR Code Generator |
 | Password Generator | Navbar Scroll Art | Weather App |
-| ToDo List | Quiz App | Emoji Keyboard
-| Random Quotes| Rotating Cube | Dino Slider
+| ToDo List | Quiz App | Emoji Keyboard |
+| Random Quotes| Rotating Cube | Dino Slider |
+| Neon Clock | Shrink & Grow | Aminated Form |
 
 ## Tech Used
 
