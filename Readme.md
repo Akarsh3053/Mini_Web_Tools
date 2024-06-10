@@ -11,6 +11,7 @@ A collection of mini web apps, web designs, and widgets that can be used indepen
 | ToDo List | Quiz App | Emoji Keyboard |
 | Random Quotes| Rotating Cube | Dino Slider |
 | Neon Clock | Shrink & Grow | Aminated Form |
+| MEME Generator | | |
 
 ## Tech Used
 
